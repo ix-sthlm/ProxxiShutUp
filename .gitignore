@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+*.jar
 
 # External tool builders
 .externalToolBuilders/
@@ -213,3 +214,15 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#LibGDX
+ProxxiShutUp-android/bin
+ProxxiShutUp-android/gen
+ProxxiShutUp-android/libs
+ProxxiShutUp-android/res
+ProxxiShutUp-android/src
+ProxxiShutUp-android/AndroidManifest.xml
+ProxxiShutUp-android/proguard.cfg
+ProxxiShutUp-android/project.properties
+ProxxiShutUp-desktop/
+ProxxiShutUp-html/
