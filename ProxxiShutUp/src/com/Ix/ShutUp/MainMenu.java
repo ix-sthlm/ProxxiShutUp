@@ -29,7 +29,8 @@ public class MainMenu  implements Screen{
 	
 	private BitmapFont font1;
 	private static Array<Sprite> Ear = new Array<Sprite>();
-	int noice;
+	private static Array<LogLine> Log = new Array<LogLine>();
+	float noice;
 	
 	@Override
 	public void render(float delta) {
@@ -37,10 +38,18 @@ public class MainMenu  implements Screen{
 		Gdx.graphics.getGL20().glClearColor( 1, 0, 0, 1 );	
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
+		if(Log.size > 0)
+		{
+		noice = Log.get(Log.size-1).getNoice();
+		}
+		else
+		{
+			noice = 0;
+		}
 		
         spriteBatch.begin();
         //Draw Ear
-        spriteBatch.draw(Ear.get(noice),0, 0, width, height);
+        spriteBatch.draw(Ear.get((int)noice),0, 0, width, height);
         
         //Draw MainMenu Buttons to the left
         for(Button button : Buttons)
